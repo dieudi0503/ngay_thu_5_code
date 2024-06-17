@@ -1,0 +1,36 @@
+
+/* body{
+     background-color: aqua;
+} */
+.loading{
+    position:relative;
+}
+.loading:before,
+.loading:after{
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    border-radius: 100rem;/* cho hình tròn*/
+}
+.loading:before {
+    z-index: 5;
+    border: 5px dashed red;
+    border-left: 5px solid transparent;
+    border-bottom:5px solid transparent;
+    animation: dashed 1s linear infinite;
+}
+.loading:after{
+    z-index: 10;
+    border: 5px solid red;
+    border-left: 5px solid transparent;
+    border-bottom:5px solid transparent;
+    animation: dashed 1s linear infinite;
+}
+@keyframes dashed {
+    to{
+        transform: rotate(360deg);
+    }
+}
